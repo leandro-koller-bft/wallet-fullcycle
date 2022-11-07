@@ -46,7 +46,7 @@ func TestCreateTransactionUsecase(t *testing.T) {
 
 	require.Nil(t, err)
 	require.NotNil(t, output)
-	// mockAccount.AssertExpectations(t)
+	mockAccount.AssertExpectations(t)
 	mockTransaction.AssertExpectations(t)
 	mockAccount.AssertNumberOfCalls(t, "Get", 2)
 	mockTransaction.AssertNumberOfCalls(t, "Save", 1)

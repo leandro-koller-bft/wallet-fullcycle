@@ -43,7 +43,7 @@ func (uc *CreateTransactionUsecase) Apply(
 	if err != nil {
 		return
 	}
-	to, err := uc.AccountGateway.Get(input.FromAccountId)
+	to, err := uc.AccountGateway.Get(input.ToAccountId)
 	if err != nil {
 		return
 	}
